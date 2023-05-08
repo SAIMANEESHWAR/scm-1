@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN-DIVISIONS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e3a3821133.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="dash.css" rel="stylesheet">
+   <script src="login.js"></script>
+</head>
+<body>
+
+
+    <section class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-aos="fade-down">
+        <div class="container-fluid" style="width: 100%;">
+            <!-- <img src="homephotos/internsalalogo.png" alt="" width="100" height="60"> -->
+            <h1><button class="btn btn-white ms-2 me-2 mt-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="fa-solid fa-bars  h3  "></i></button>
+                <h1 class="mt-2">home</h1>
+            </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navfont">
+
+                    <li class="nav-item">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success"  type="submit">Search</button>
+                        </form>
+                    </li>
+                    <li class="nav-item-22">
+                        <div class="profile-23">
+                            <i class="fa-sharp fa-solid fa-bell"></i>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="profile-23">
+                                <a>login</a>
+                            </div>
+                        </button>
+                        <!-- <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                            <div class="profile-23">
+                                <a>register</a>
+                            </div> -->
+                        </button>
+                    </li>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal -1-->
+    <div class="modal fade col-md-10 mx-auto col-lg-5" id="staticBackdrop" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">SIGN IN FORM</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                    <div class="form-floating mb-3">
+                        <input  class="form-control" id="f1" placeholder="DIVISION ID">
+                        <label for="floatingInput">DIVISION ID</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="f2" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" onclick="sub()" >Sign in</button>
+                    <hr class="my-4">
+                    <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    
+
+ <!-- jquery -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- web3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.4.0/web3.min.js"></script>
+
+
+
+    <script>
+		
+         window.onload = async () => {
+			
+            if (window.ethereum !== "undefined") {
+                console.log("connected");
+                const acconts = await ethereum.request({ method: "eth_requestAccounts" });
+
+                accont = acconts[0];
+
+            } else {
+                console.log("not connected");
+
+            }
+           
+            window.web3 = await new Web3(window.ethereum);
+            window.contract = await new window.web3.eth.Contract(ABI2, address2);
+            
+
+        }
+
+
+
+
+
+
+
+        
+
+    const sub = async () => {
+        
+
+        let f1 = document.getElementById("f1").value;
+            let f2 = document.getElementById("f2").value;
+           
+            
+            
+            const didpass=await window.contract.methods.adddivreturns().call();
+            alldivid=didpass[0];
+            alldivpass=didpass[1];
+            
+            
+            var r=0;
+           
+                for(var i=0;i<alldivid.length;i++){
+                    if(alldivid[i]==f1){
+                        if(alldivpass[i]==String(f2)){
+                            sessionStorage.setItem('alldivids',f1);
+                            
+                            console.log("success");
+                            r=1;
+                            document.location.href="divnewreq.html";
+                        }
+                    }
+                }
+            
+                if(r==0){
+                    console.log("wrong password or wrong id");
+                }
+                
+
+
+      
+
+
+    }
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

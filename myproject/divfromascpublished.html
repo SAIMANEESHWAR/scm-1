@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vender</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/e3a3821133.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="dash.css" rel="stylesheet">
+  <script src="rough.js"></script>
+</head>
+
+<body>
+  <section class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-aos="fade-down">
+    <div class="container-fluid" style="width: 100%;">
+      <!-- <img src="homephotos/internsalalogo.png" alt="" width="100" height="60"> -->
+      <h1><button class="btn btn-white ms-2 me-2 mt-3" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+            class="fa-solid fa-bars  h3  "></i></button>
+        <h1 class="mt-2" id="unitname">DIVISION-EACH-UNIT-REQUEST</h1>
+      </h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navfont">
+
+          <li class="nav-item">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </li>
+          <li class="nav-item-22">
+            <div class="profile-23">
+              <i class="fa-sharp fa-solid fa-bell"></i>
+            </div>
+          </li>
+
+
+          <li class="nav-item">
+
+            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="profile-23">
+                <a><img src="homephotos/profile1.png" alt=""></a>
+              </div>
+            </button>
+          </li>
+
+      </div>
+    </div>
+  </section>
+  <!--offcanvas-->
+  <div class="p-5">
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
+      style="width: 280px;">
+
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">SCM</h1>
+        <button type="button" class="btn-close border" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto me-3">
+        <li class="nav-item">
+          <a href="divnewreq.html" class="nav-link " aria-current="page">
+              <i class="fa-solid fa-house me-2"></i> Home
+          </a>
+      </li>
+
+      
+      <li>
+          <a href="divaccreq.html" class="nav-link link-body-emphasis">
+              <i class="fa-solid fa-clipboard-check me-2"></i> Accepted Requests
+          </a>
+
+      </li>
+      <li>
+          <a href="divfromascreq.html" class="nav-link link-body-emphasis">
+              <i class="fa-solid fa-paper-plane me-2"></i> New Requests From ASC
+          </a>
+      </li>
+      <li>
+          <a href="#" class="nav-link link-body-emphasis active">
+              <i class="fa-solid fa-share-from-square me-2"></i> ASC Forwarded Requests
+          </a>
+      </li>
+   
+      </ul>
+      <hr>
+      <div class="dropdown">
+        <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="homephotos/profile1.png" alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong>mdo</strong>
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="  dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--table-->
+
+  <div id="fullbody" class="container">
+    <div class="col-md-10 mx-auto col-lg-5 mt-5">
+			<div class="p-4 mt-4 p-md-5 border rounded-3 bg-body-tertiary">
+		<div class="d-flex justify-content-center">
+			<div class="spinner-border" role="status">
+			  <span class="visually-hidden">Loading...</span>
+			</div>
+		  </div>
+		</div>
+		</div>
+  </div>
+
+
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- web3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.4.0/web3.min.js"></script>
+
+  <script>
+    let accont;
+    
+    var s1 = "";
+    var s2 = "";
+    var tabledata = "";
+    var arr1 = [];
+    var arr2 = [];
+    divid=sessionStorage.getItem('alldivids');
+    document.getElementById("unitname").innerHTML=`DIVISION ID-${divid}`;
+    //  venid = sessionStorage.getItem('newvenid');
+    // console.log(venid); 
+
+    window.onload = async () => {
+
+      if (window.ethereum !== "undefined") {
+        console.log("connected");
+        const acconts = await ethereum.request({ method: "eth_requestAccounts" });
+
+        accont = acconts[0];
+
+      } else {
+        console.log("not connected");
+
+      }
+     
+      window.web3 = await new Web3(window.ethereum);
+      window.contract = await new window.web3.eth.Contract(ABI, address);
+      
+      
+     
+     
+            /*two arrays condition*/
+       
+           useless=0;
+		   const arr33s = await window.contract.methods.returnanodivtounits(divid).call();
+		   anodiv=arr33s[0];
+           anounit=arr33s[1];
+           anoord=arr33s[2]
+
+           const kin = await window.contract.methods.anodivtounitconfirmreturn().call();
+          anodivtounitconfirm=kin[0];
+          anodivtounitconfirmid=kin[1];
+          anodivtounitconfirmuintid=kin[2];
+console.log(anodiv,anounit,anoord);
+
+        const kin2 = await window.contract.methods.returnmanifacturer().call();
+          strmani=kin2[0];
+
+
+
+      
+      fbody = ``;
+      // for (var i = 0; i < anodiv.length; i++) {
+        for(var i=anodiv.length-1;i>=0;i--){
+
+    //    if (!anodivtounitsreturn.includes(String(i)) ) {
+        //   if (!buycon.includes(String(i))) {
+            const arr3s = await window.contract.methods.showproducts(anodiv[i],anounit[i]).call();
+            pro=arr3s[0];
+            qua=arr3s[1];
+            ldate=arr3s[2];
+            tabledata='';
+            console.log(i);
+            const data1 = pro[anoord[i]];
+            const data2 = qua[anoord[i]];
+            const date = ldate[anoord[i]];
+           
+            var tabledata = `<div class="container p-5 mt-4  mb-4 bg-body-tertiary rounded-3">
+                            <div class="container-fluid py-5">
+                 
+
+                        
+                              <h1 class="display-5 fw-bold mb-2 text-body-emphasis">FROM UNIT ID : ${anounit[i]}</h1>
+                              <h5 class="text-warning "> Last Date: ${date}</h5>
+                              <h5 class="text-info">FROM DIVISION ID : ${anodiv[i]}</h5>
+                              <h5 class="text-info">REQUEST NO : ${parseInt(anoord[i]) + 1}</h5>
+                     
+                       
+                              <table class="table mt-4">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">PRODUCTNAME</th>
+                                    <th scope="col">QUANTITY</th>
+                                    
+                                    <th class="ms-5" scope="col" id="fourhead${i}"></th>
+                                  </tr>
+                                </thead>
+                                <tbody id="tablebody">`;
+            for (let j = 0; j < data1.length; j++) {
+
+              tabledata = tabledata + ` <tr>
+                     
+                    <td><label class="form-check-label" for="flexCheckChecked">${data1[j]}</td>
+                        <td><label class="form-check-label" for="flexCheckChecked">${data2[j]}</td>
+                        
+                    </tr> `;
+            }
+
+
+            var str3=`${anodiv[i]} ${anounit[i]} ${anoord[i]}`;
+            if(strmani.includes(str3)){
+              tabledata = tabledata + `</tbody>
+                                        </table>
+
+
+                                        <div class="mt-4" id="tp${i}"></div>
+                                        <!--button-->
+                                        <div class="container">
+                                          <div class=" mt-5">
+                                            <div class="row">
+                                              
+                                              
+                                              
+                                                <div class="d-flex flex-row mb-3">
+                                              <div class="p-2"><h4> Status :</h4> </div>
+                                              <div class="p-2"><h4> SENT THE REQUEST TO  MANIFACTURER</h4> </div>
+												
+										
+                                          
+                                            
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+
+                                        
+                                      
+                                      </div>
+                                    </div>`;
+            }
+            else if (!anodivtounitconfirm.includes(str3) ) {
+      
+            
+            tabledata = tabledata + `</tbody>
+                                        </table>
+
+
+                                        <div class="mt-4" id="tp${i}"></div>
+                                        <!--button-->
+                                        <div class="container">
+                                          <div class=" mt-5">
+                                            <div class="row">
+                                              
+                                              
+                                              
+                                                <div class="d-flex flex-row mb-3">
+                                              <div class="p-2"><h4> Status :</h4> </div>
+                                              <div class="p-2"><h4> Pending</h4> </div>
+												
+										
+                                            
+                                            
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+
+                                        
+                                      
+                                      </div>
+                                    </div>`;
+                  }
+                  else{
+
+for(var m=0;m<anodivtounitconfirm.length;m++){
+  if(anodivtounitconfirm[m]==str3){
+    s=m;
+  }
+}
+
+
+                    tabledata = tabledata + `</tbody>
+                                        </table>
+
+
+                                        <div class="mt-4" id="tp${i}"></div>
+                                        <!--button-->
+                                        <div class="container">
+                                          <div class="container mt-5">
+                                            <div class="row">
+                                              
+                                              status: ACCEPTED  <br>
+                                              BY DIV : ${anodivtounitconfirmid[s]} <br>
+                                              BY UNIT : ${anodivtounitconfirmuintid[s]}
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+
+                                        
+                                      
+                                      </div>
+                                    </div>`;
+
+                  }
+
+
+
+
+            fbody = fbody + tabledata;
+        // }
+        // }
+
+      }
+
+      console.log(fbody.length);
+			if(fbody.length==0){
+        fbody=fbody+`<div class="row align-items-center g-lg-5 py-5">
+			<div class="col-lg-7 text-center text-lg-start">
+			  <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">NO NEW REQUESTS</h1>
+			  <p class="col-lg-10 fs-4">There is no new requests of ASC that  is published by you</p>
+			</div>
+			<div class="col-md-10 mx-auto col-lg-5">
+			  <div class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+          <p> WAITING FOR YOUR COMMAND MY BROTHER</p>
+				<img src="homephotos/iamwaiting.jpg" class="img-fluid " alt="...">
+			  </div>
+			</div>
+		  </div>	`
+				}
+      document.getElementById("fullbody").innerHTML = fbody;
+
+}
+// const rea = async (rn) => {
+        
+
+//         console.log(rn);
+     
+
+
+//         web3.eth.getAccounts().then(function (accounts) {
+//         var acc = accounts[0];
+
+//         return contract.methods.anodivtounits(anodiv[rn],divid,anounit[rn],whichord[rn],rn).send({ from: acc });
+
+//       }).then(function (tx) {
+// 				console.log(tx);
+// 				alert(" REQUEST SENT SUCCESSFULLY");
+
+// 			}).catch(function (tx) {
+// 				console.log(tx);
+// 				alert(" REQUEST NOT SENT SUCCESSFULLY");
+// 			})
+
+
+//     }
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e3a3821133.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="dash.css" rel="stylesheet">
+	<script src="rough.js"></script>
+</head>
+
+<body>
+    <section class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-aos="fade-down">
+        <div class="container-fluid" style="width: 100%;">
+            <!-- <img src="homephotos/internsalalogo.png" alt="" width="100" height="60"> -->
+            <h1><button class="btn btn-white ms-2 me-2 mt-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="fa-solid fa-bars  h3  "></i></button>
+                <h1 class="mt-2">ASC</h1>
+            </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navfont">
+
+                    <li class="nav-item">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <div class="profile-23">
+                            <i class="fa-sharp fa-solid fa-bell"></i>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <button type="button" class="btn " >
+                            <div class="profile-23">
+                                <a><img src="homephotos/profile1.png" alt=""></a>
+                            </div>
+                        </button>
+                    </li>
+
+            </div>
+        </div>
+    </section>
+<!--modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">ACCEPTED BY:</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">PRODUCTNAME</th>
+                        <th scope="col">QUANTITY</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                    
+                </tbody>
+            </table>
+            <div id="reqid" class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--offcanvas-->
+    <div class="p-5">
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
+            style="width: 280px;">
+
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">SCM</h1>
+                <button type="button" class="btn-close border" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto me-3">
+                <li class="nav-item">
+                    <a href="ascarr.html" class="nav-link  " aria-current="page">
+                      <i class="fa-solid fa-paper-plane me-2"></i> New Requests
+                    </a>
+                  </li>
+          
+                  <li>
+                    <a href="#" class="nav-link link-body-emphasis active ">
+                      <i class="fa-solid fa-clipboard-check me-2"></i> Accepted Requests
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ascforwad.html" class="nav-link link-body-emphasis ">
+                      <i class="fa-solid fa-share-from-square me-2"></i> Requests To Divisions
+                    </a>
+                  </li>
+                  <li>
+                    <a href="manifacturer.html" class="nav-link link-body-emphasis ">
+                      <i class="fa-solid fa-cart-shopping me-2"></i> Manifacturer
+                    </a>
+                  </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="homephotos/profile1.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>mdo</strong>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    
+
+    <!--new order-->
+    <div  class="container">
+        <div class="row" id="allreq">
+            <div class="col-md-10 mx-auto col-lg-5 mt-5">
+                <div class="p-4 mt-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- web3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.4.0/web3.min.js"></script>
+
+    <script>
+        let accont;
+        var s1 = "";
+        var s2 = "";
+        var tabledata = "";
+        var arr1 = [];
+        var arr2 = [];
+        var fbody="";
+        
+        
+
+        window.onload = async () => {
+          if (window.ethereum !== "undefined") {
+            console.log("connected");
+            const acconts = await ethereum.request({ method: "eth_requestAccounts" });
+    
+            accont = acconts[0];
+    
+          } else {
+            console.log("not connected");
+    
+          }
+        
+          window.web3 = await new Web3(window.ethereum);
+          window.contract = await new window.web3.eth.Contract(ABI, address);
+        numven=await window.contract.methods.ascaccreturn().call();
+        
+
+        const arr33s = await window.contract.methods.returnasc().call();
+		   whichdiv=arr33s[0];
+           whichunit=arr33s[1];
+           whichord=arr33s[2]
+        
+
+        
+        var str=``;
+        // for(var i=0;i<numven.length;i++){
+            for(var i=numven.length-1;i>=0;i--){
+
+            /*taken the i values from ascarr so directly doing*/
+            console.log(i);
+           
+            str=str+`  <div class="col-lg-5 ms-5 p-5  mt-3  shadow">
+				<img class="bd-placeholder-img ms-2 mt-3 rounded-circle border-white" width="125" height="120" src="homephotos/profile1.png">
+        <h2 class=" mt-3 mb-3 fw-normal">ACCEPTED ORDER-${parseInt(i)+1}</h2>
+        <h5 class="text-warning">
+			ACCEPTED TO : ${whichdiv[numven[i]]} --   ${whichunit[numven[i]]}
+			</h5>
+            <h5 class="text-info">
+            ORDER NO : ${parseInt(whichord[numven[i]])+1}
+            <br>
+			
+			
+			</h5>
+      
+        <button onclick="eachreqmodal(${i})" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        >View Details »</button></p>
+      </div>`;
+
+
+	
+
+
+         
+        }
+        
+
+
+
+        console.log(str.length);
+			if(str.length==0){
+                str=str+`<div class="row align-items-center g-lg-5 py-5">
+			<div class="col-lg-7 text-center text-lg-start">
+			  <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">NO NEW REQUESTS</h1>
+			  <p class="col-lg-10 fs-4">There is no accepted requests</p>
+			</div>
+			<div class="col-md-10 mx-auto col-lg-5">
+			  <div class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+          <p> WAITING FOR YOUR COMMAND MY BROTHER</p>
+				<img src="homephotos/iamwaiting.jpg" class="img-fluid " alt="...">
+			  </div>
+			</div>
+		  </div>	`
+				}
+        
+         document.getElementById("allreq").innerHTML=str;
+    
+        }
+    
+    
+      
+const eachreqmodal = async (cn) => {
+    const arr3s = await window.contract.methods.showproducts(whichdiv[numven[cn]],whichunit[numven[cn]]).call();
+            pro=arr3s[0];
+            qua=arr3s[1];
+            ldate=arr3s[2];
+            tabledata='';
+           
+            const data1 = pro[whichord[numven[cn]]];
+            const data2 = qua[whichord[numven[cn]]];
+            const date = ldate[whichord[numven[cn]]];
+
+
+
+
+let s = "form<br>";
+var tabledata = "";
+
+for (let i = 0; i < data1.length; i++) {
+
+    tabledata = tabledata + ` <tr>
+<td>${data1[i]}</td>
+<td>${data2[i]}</td>
+
+</tr> `;
+ 
+}
+console.log(tabledata);
+document.getElementById("tablebody").innerHTML = tabledata;
+document.getElementById("reqid").innerHTML = `<h3>last date : ${date}</h3>`;
+}
+
+
+    
+    
+    
+       
+    </script>  
+   
+
+</body>
+
+</html>
